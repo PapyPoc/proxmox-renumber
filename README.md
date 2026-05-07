@@ -25,127 +25,65 @@ Utilisation à vos risques.
 - LVM
 - LVM-Thin
 - ZFS
-
 ✅ Mise à jour automatique des références :
 - `vm-OLD-disk-X`
 - `subvol-OLD-disk-X`
 - `/images/OLD/`
----
-
 # Compatibilité
-
 Testé sur :
-
 - Proxmox VE 9.1.9
 - Debian 13
-
----
-
 # Installation
-
 Cloner le dépôt :
-
 ```bash
 git clone https://github.com/USER/proxmox-renumber.git
 cd proxmox-renumber
 ```
-
 Rendre le script exécutable :
-
 ```bash
 chmod +x proxmox-renumber.sh
 ```
-
----
-
 # Utilisation
-
 ## Renommer une VM
-
 ```bash
 ./proxmox-renumber.sh vm OLDID NEWID
 ```
-
 Exemple :
-
 ```bash
 ./proxmox-renumber.sh vm 100 200
 ```
-
----
-
 ## Renommer un container LXC
-
 ```bash
 ./proxmox-renumber.sh lxc OLDID NEWID
 ```
-
 Exemple :
-
 ```bash
 ./proxmox-renumber.sh lxc 101 201
 ```
-
----
-
-# Exemples
-
+# Résultat
 ## VM
-
 Avant :
-
 ```text
 100.conf
 vm-100-disk-0
 ```
-
 Après :
-
 ```text
 200.conf
 vm-200-disk-0
 ```
-
----
-
 ## LXC
-
 Avant :
-
 ```text
 101.conf
 subvol-101-disk-0
 ```
-
 Après :
-
 ```text
 201.conf
 subvol-201-disk-0
 ```
-
----
-
 # Sauvegarde recommandée
----
-# Vérifications utiles
-Lister les VM :
-```bash
-qm list
-```
-Lister les CT :
-```bash
-pct list
-```
-Lister les volumes LVM :
-```bash
-lvs
-```
-Lister les datasets ZFS :
-```bash
-zfs list
-```
----
 # Limitations
 Le script ne gère pas automatiquement :
 - Ceph RBD avancé
@@ -153,15 +91,12 @@ Le script ne gère pas automatiquement :
 - Snapshots externes
 - Réplication Proxmox
 - Backups PBS liés au VMID
----
 # Bonnes pratiques
 - Toujours arrêter la VM/LXC
 - Toujours faire un backup
 - Vérifier les disques orphelins
 - Tester dans un homelab avant production
----
 # Licence
 GNU General Public License v3.0
----
 # Auteur
 Créé pour la communauté Proxmox ❤️
