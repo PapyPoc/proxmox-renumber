@@ -8,7 +8,6 @@ Le script gère :
 - ZFS
 - VM QEMU
 - Containers LXC
----
 # ⚠️ Avertissement
 Ce script modifie directement les configurations Proxmox.
 Avant utilisation :
@@ -16,7 +15,7 @@ Avant utilisation :
 - arrêter la VM/LXC
 - tester dans un environnement de lab
 Utilisation à vos risques.
----
+
 # Fonctionnalités
 ✅ Renommage automatique des VMID / CTID  
 ✅ Compatible VM et LXC  
