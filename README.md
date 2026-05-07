@@ -1,7 +1,5 @@
 # proxmox-renumber
-
 Script Bash pour renuméroter automatiquement des VM QEMU et containers LXC sous Proxmox VE.
-
 Le script gère :
 - renommage des fichiers de configuration
 - renommage des références de disques
@@ -10,29 +8,19 @@ Le script gère :
 - ZFS
 - VM QEMU
 - Containers LXC
-
 ---
-
 # ⚠️ Avertissement
-
 Ce script modifie directement les configurations Proxmox.
-
 Avant utilisation :
-
 - faire un backup
 - arrêter la VM/LXC
 - tester dans un environnement de lab
-
 Utilisation à vos risques.
-
 ---
-
 # Fonctionnalités
-
 ✅ Renommage automatique des VMID / CTID  
 ✅ Compatible VM et LXC  
 ✅ Sauvegarde automatique des configs  
-
 ✅ Gestion :
 - Directory Storage
 - LVM
@@ -43,7 +31,6 @@ Utilisation à vos risques.
 - `vm-OLD-disk-X`
 - `subvol-OLD-disk-X`
 - `/images/OLD/`
-
 ---
 
 # Compatibilité
@@ -160,7 +147,6 @@ Lister les datasets ZFS :
 zfs list
 ```
 ---
-
 # Limitations
 Le script ne gère pas automatiquement :
 - Ceph RBD avancé
@@ -176,9 +162,7 @@ Le script ne gère pas automatiquement :
 - Tester dans un homelab avant production
 ---
 # Licence
-MIT License
+GNU General Public License v3.0
 ---
-
 # Auteur
-
 Créé pour la communauté Proxmox ❤️
