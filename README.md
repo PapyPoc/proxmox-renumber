@@ -50,8 +50,8 @@ Utilisation à vos risques.
 
 Testé sur :
 
-- Proxmox VE 8.x
-- Debian 12
+- Proxmox VE 9.1.9
+- Debian 13
 
 ---
 
@@ -141,74 +141,42 @@ subvol-201-disk-0
 ---
 
 # Sauvegarde recommandée
-
-## VM
-
-```bash
-vzdump 100 --mode stop --compress zstd
-```
-
-## LXC
-
-```bash
-vzdump 101 --mode stop --compress zstd
-```
-
 ---
-
 # Vérifications utiles
-
 Lister les VM :
-
 ```bash
 qm list
 ```
-
 Lister les CT :
-
 ```bash
 pct list
 ```
-
 Lister les volumes LVM :
-
 ```bash
 lvs
 ```
-
 Lister les datasets ZFS :
-
 ```bash
 zfs list
 ```
-
 ---
 
 # Limitations
-
 Le script ne gère pas automatiquement :
-
 - Ceph RBD avancé
 - Clusters complexes multi-storage exotiques
 - Snapshots externes
 - Réplication Proxmox
 - Backups PBS liés au VMID
-
 ---
-
 # Bonnes pratiques
-
 - Toujours arrêter la VM/LXC
 - Toujours faire un backup
 - Vérifier les disques orphelins
 - Tester dans un homelab avant production
-
 ---
-
 # Licence
-
 MIT License
-
 ---
 
 # Auteur
